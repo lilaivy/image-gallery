@@ -6,12 +6,15 @@ export default class Thumbnail extends Component {
         return (
             <div>
                 {this.props.images.map(image => (
+                    <figure style={{
+                        display:'inline-block'}}>
                     <img src={image.url} style={{
                         height: '100px',
-                        width: '100px'
+                        width: '100px',
                     }}
                     />
-                   
+                     <figcaption> {image.title} </figcaption>
+                     </figure>   
                 ))}
             </div>
 
@@ -19,4 +22,3 @@ export default class Thumbnail extends Component {
     }
 }
 
-//  <figcaption>{image.title}</figcaption>

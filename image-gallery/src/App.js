@@ -29,15 +29,20 @@ export default class App extends Component {
     const { images } = this.state;
     return (
       <div >
-        <header>
-          <h2>Image Gallery</h2>
+
+        <div>
+          <h2>List Gallery</h2>
           <List
             images={images}
           />
+        </div>
+        <div>
+          <h2>Thumbnail Gallery</h2>
           <Thumbnail
-          images={images}
+            images={images}
           />
-        </header>
+        </div>
+
       </div>
     );
   }
