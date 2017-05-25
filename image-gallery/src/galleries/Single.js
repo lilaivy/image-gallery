@@ -5,15 +5,16 @@ export default class Single extends Component {
         super(props);
 
         this.state = {
-            currentImage:
-            nextImage:
-            previousImage:
+            index: 0,
 
         }
+
     }
 
     //Q: how do I get the property of image.url off of images array?
     //TODO: add on click to go to next/previous bunny
+
+
 
     nextBunny(nextBunny) {
         this.nextBunny({ nextBunny });
@@ -26,6 +27,10 @@ export default class Single extends Component {
 
 
     render() {
+        const { index } = this.state;
+        const image = this.props.images[index];
+
+
         if (!this.props.images.length) {
             return null;
         }
@@ -40,9 +45,9 @@ export default class Single extends Component {
                     &larr;</span>
 
                 <span>
-                    <img src={this.props.images[1].url} />
-                    <p>{this.props.images[1].title}</p>
-                    <p>{this.props.images[1].description} </p>
+                    <img src={image.url} />
+                    <p>{image.title}</p>
+                    <p>{image.description} </p>
                 </span>
 
                 <span className='previousBunny' style={{
