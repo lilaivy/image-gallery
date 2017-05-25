@@ -23,10 +23,6 @@ export default class App extends Component {
       });
   }
 
-  // slectImage(selectedImage) {
-  //   this.setState({ selectedImage });
-  // }
-
 
   render() {
     const { images } = this.state;

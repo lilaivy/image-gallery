@@ -11,17 +11,29 @@ export default class Single extends Component {
 
     }
 
-    //Q: how do I get the property of image.url off of images array?
     //TODO: add on click to go to next/previous bunny
+    //Two ways to use onClick: 
+    //1:  onClick={this.previousBunny}....changes the context of this so must bind even in own comp
+    //2.   onClick={() =>  this.nextBunny(index)} >
 
 
 
-    nextBunny(nextBunny) {
-        this.nextBunny({ nextBunny });
+    nextBunny(index) {
+        const arrayLength = this.props.images.length;
+        index++;
+        if (index > arrayLength -1) {
+            index = 0;
+        }
+        this.setState({ index });
     }
 
-    previousBunny(previousBunny) {
-        this.previousBunny({ previousBunny });
+    previousBunny(index) {
+        const arrayLenth = this.props.images.length;
+        index--;
+        if (index < 0) {
+            index = arrayLenth - 1;
+        }
+        this.setState({ index });
     }
 
 
@@ -39,9 +51,12 @@ export default class Single extends Component {
                 display: 'inline-block'
             }} >
                 <span className='nextBunny' style={{
-                    fontSize: '50px'
+                    fontSize: '50px',
+                    cursor: 'pointer'
 
-                }} >
+                }}
+                    onClick={() => this.previousBunny(index)}
+                >
                     &larr;</span>
 
                 <span>
@@ -51,8 +66,10 @@ export default class Single extends Component {
                 </span>
 
                 <span className='previousBunny' style={{
-                    fontSize: '50px'
-                }} >
+                    fontSize: '50px',
+                    cursor: 'pointer'
+                }}
+                    onClick={() => this.nextBunny(index)} >
                     &rarr;</span>
             </div>
         )
