@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import List from './galleries/List';
 import Thumbnail from './galleries/Thumbnail';
+import Single from './galleries/Single';
 import imageData from './images';
 
 export default class App extends Component {
@@ -42,7 +43,12 @@ export default class App extends Component {
             images={images}
           />
         </div>
-
+        <div>
+          <h2>Single Image Gallery</h2>
+          <Single
+            images={images}
+          />
+        </div>
       </div>
     );
   }
