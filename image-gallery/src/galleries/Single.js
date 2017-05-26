@@ -49,7 +49,7 @@ export default class Single extends Component {
         return (
             <div style={{
                 display: 'inline-block'
-            }} >
+            }} >  
                 <span className='nextBunny' style={{
                     fontSize: '50px',
                     cursor: 'pointer'

@@ -7,6 +7,7 @@ export default class List extends Component {
     render() {
         return (
             <div>
+                <h2>List Gallery</h2>
                 {this.props.images.map(image => (
                     <ul key={image.url}>
                         <li >{image.title} </li>
