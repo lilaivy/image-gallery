@@ -13,3 +13,23 @@
 .App-intro {
   font-size: large;
 }
+
+.header-title {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.view-buttons {
+  margin: 15px;
+  font-size: 20px;
+  border-radius: 4px;
+  color: white;
+  border: 2px solid rgb(255, 82, 82);
+  transition-duration: 0.4s;
+
+}
+
+.view-buttons:hover {
+  background-color: rgb(255, 82, 82);
+
+}

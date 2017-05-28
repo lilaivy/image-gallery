@@ -47,30 +47,31 @@ export default class Single extends Component {
             return null;
         }
         return (
-            <div style={{
-                display: 'inline-block'
-            }} >  
+            <div>  
                 <span className='nextBunny' style={{
                     fontSize: '50px',
                     cursor: 'pointer'
 
                 }}
-                    onClick={() => this.previousBunny(index)}
-                >
-                    &larr;</span>
-
-                <span>
-                    <img src={image.url} />
-                    <p>{image.title}</p>
-                    <p>{image.description} </p>
+                    onClick={() => this.previousBunny(index)}>
+                    &larr;
                 </span>
 
                 <span className='previousBunny' style={{
                     fontSize: '50px',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
                 }}
                     onClick={() => this.nextBunny(index)} >
-                    &rarr;</span>
+                    &rarr;
+                </span>
+
+                <div>
+                    <img src={image.url} />
+                    <p>{image.title}</p>
+                    <p>{image.description} </p>
+                </div>
+
+                
             </div>
         )
     }

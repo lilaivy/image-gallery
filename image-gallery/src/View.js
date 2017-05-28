@@ -16,8 +16,8 @@ export default class Veiw extends Component {
 
     }
 
-    changeView( View = null) {
-        this.setState({ CurrentView: View});
+    changeView(View = null) {
+        this.setState({ CurrentView: View });
     }
 
 
@@ -25,32 +25,34 @@ export default class Veiw extends Component {
 
         const { CurrentView } = this.state;
         return (
-            <div>
+            <div className="header-title">
                 <header>
-                    <h1>WELCOME TO THE FUZZY BUNNY IMAGE GALLERY</h1>
+                    <h1 >WELCOME TO THE FUZZY BUNNY IMAGE GALLERY</h1>
                 </header>
                 <h2>Check out all the bunnies...</h2>
-                <span>
-                    <button 
-                    onClick={() => this.changeView(List)}
-                    >CHECK OUT LIST VIEW</button>
-                </span>
-                <span>
-                    <button 
-                    onClick={() => this.changeView(Thumbnail)}
-                    >CHECK OUT THUMBNAIL VIEW</button>
-                </span>
-                <span>
-                    <button 
-                    onClick={() => this.changeView(Single)}
-                    >CHECK OUT SINGLE VIEW</button>
-                </span>
-                {CurrentView && <CurrentView 
-                    images={this.props.images} />
-                }
-        </div>
-             
-    )
-}
+               
+                    <span>
+                        <button className="view-buttons"
+                            onClick={() => this.changeView(List)}
+                        >CHECK OUT LIST VIEW</button>
+                    </span>
+                    <span>
+                        <button className="view-buttons"
+                            onClick={() => this.changeView(Thumbnail)}
+                        >CHECK OUT THUMBNAIL VIEW</button>
+                    </span>
+                    <span>
+                        <button className="view-buttons"
+                            onClick={() => this.changeView(Single)}>CHECK OUT SINGLE VIEW</button>
+                    </span>
+                    
+                    {CurrentView && <CurrentView
+                        images={this.props.images} />
+                    }
+        
+            </div>
+
+        )
+    }
 
 }
