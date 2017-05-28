@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 
-export default class List extends Component {
+
+    export default function List (props) {
   
-    render() {
         return (
             <div>
-                {this.props.images.map(image => (
+                {props.images.map(image => (
                     <ul key={image.url}>
                         <li >{image.title} </li>
                         <li>{image.description} </li>
@@ -19,5 +19,3 @@ export default class List extends Component {
         )
     }
 
-
-}

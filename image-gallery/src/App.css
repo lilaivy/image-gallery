@@ -31,5 +31,8 @@
 
 .view-buttons:hover {
   background-color: rgb(255, 82, 82);
+}
 
+.images{
+  max-width: 50%
 }

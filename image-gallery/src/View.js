@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import List from './galleries/List';
 import Single from './galleries/Single';
 import Thumbnail from './galleries/Thumbnail';
+import PropTypes from 'prop-types';
 
 export default class Veiw extends Component {
 
@@ -15,6 +16,11 @@ export default class Veiw extends Component {
         }
 
     }
+//use static if defining proptypes within the class.  
+// if function View.propTypes.string.isrequired
+    static propTypes = {
+images:PropTypes.array.isRequired
+}
 
     changeView(View = null) {
         this.setState({ CurrentView: View });
@@ -45,7 +51,7 @@ export default class Veiw extends Component {
                         <button className="view-buttons"
                             onClick={() => this.changeView(Single)}>CHECK OUT SINGLE VIEW</button>
                     </span>
-                    
+
                     {CurrentView && <CurrentView
                         images={this.props.images} />
                     }

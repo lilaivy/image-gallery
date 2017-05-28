@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 
 export default class Single extends Component {
     constructor(props) {
@@ -66,7 +67,7 @@ export default class Single extends Component {
                 </span>
 
                 <div>
-                    <img src={image.url} />
+                    <img className='images' src={image.url} />
                     <p>{image.title}</p>
                     <p>{image.description} </p>
                 </div>
