@@ -26,6 +26,6 @@ export default function Thumbnail(props) {
 }
 
 Thumbnail.proptypes = {
-images:PropTypes.array.isRequired
-};
+images:PropTypes.arrayOf(PropTypes.object).isRequired
+};  //Q: This worked when I just had it listes as an array, is arrayOf optional?
 
