@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import PropTypes from 'prop-types';
 
 
     export default function List (props) {
@@ -18,4 +17,8 @@ import React from 'react';
 
         )
     }
+
+    List.proptypes = {
+images:PropTypes.array.isRequired
+};
 

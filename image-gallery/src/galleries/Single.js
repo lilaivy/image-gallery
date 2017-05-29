@@ -14,8 +14,8 @@ export default class Single extends Component {
 
     //TODO: add on click to go to next/previous bunny
     //Two ways to use onClick: 
-    //1:  onClick={this.previousBunny}....changes the context of this so must bind even in own comp
-    //2.   onClick={() =>  this.nextBunny(index)} > //
+    //1:  onClick={this.previousBunny}....changes the context of this so must bind even in own component
+    //2.   onClick={() =>  this.nextBunny(index)} > no need to bind because arrow function binds lexically//
 
 
 
