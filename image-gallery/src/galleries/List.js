@@ -8,8 +8,8 @@ import React from 'react';
         return (
             <div>
                 {props.images.map(image => (
-                    <ul key={image.url}>
-                        <li >{image.title} </li>
+                    <ul className="list-view" key={image.url}>
+                        <li>{image.title} </li>
                         <li>{image.description} </li>
                         <li>{image.url} </li>
                     </ul>))}

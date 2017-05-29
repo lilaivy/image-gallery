@@ -17,7 +17,7 @@ export default class Veiw extends Component {
 
     }
 //use static if defining proptypes within the class.  
-// if function View.propTypes.string.isrequired
+// if function  statement looks like: View.propTypes.string.isrequired
     static propTypes = {
 images:PropTypes.array.isRequired
 }
