@@ -58,6 +58,15 @@
  color: rgb(255, 82, 82);
 }
 
+.thumbnail-image:hover {
+  cursor: pointer;
+  transform: scale(1.5); 
+
+}
+
+
+
+
 
 
 
