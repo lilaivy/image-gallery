@@ -16,10 +16,10 @@ export default class UpdateImages extends Component {
 
     componentDidMount() {
         return (imagesApi.getImages()
-            .then([title, description, url, wiki]) => {
-            this.setState({ title, description, url, wiki })
-        })
-    };
+            .then(([title, description, url, wiki]) => {
+                this.setState({ title, description, url, wiki })
+            }))
+    }
 
     handleAdd(image) {
         imagesApi.addImage(image)
