@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import View from './components/View.js'
 import imageData from './imagesApi';
+import UpdateImages from './components/UpdateImages';
 
 export default class App extends Component {
 
@@ -15,7 +16,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    imageData.get()
+    imageData.getImages()
       .then(images => {
         this.setState({ images })
       });
@@ -27,6 +28,9 @@ export default class App extends Component {
     return (
         <div>
           <View classname="view-wrapper" images={images} />
+          <div>
+            <UpdateImages images={images}/>
+          </div>
         </div>
   
     );

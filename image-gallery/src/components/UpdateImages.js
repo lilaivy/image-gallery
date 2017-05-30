@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import View from './View';
 import AddImage from './AddImage';
 import imagesApi from '../imagesApi';
 import '../App.css';
@@ -12,20 +11,21 @@ export default class UpdateImages extends Component {
         this.state = {
             images: []
         }
+        this.handleAdd = this.handleAdd.bind(this);
     }
 
     componentDidMount() {
-        return Promise.all
-            ([imagesApi.getImages()])
-            .then(([images]) => {
-                this.setState({ images });
-            })
-    }
+        return (imagesApi.getImages()
+            .then([title, description, url, wiki]) => {
+            this.setState({ title, description, url, wiki })
+        })
+    };
 
     handleAdd(image) {
         imagesApi.addImage(image)
             .then(image => {
                 this.setState({
+                    //adding a new image to the imagesApi array
                     images: [...this.state.images, image]
                 });
             })
@@ -38,7 +38,7 @@ export default class UpdateImages extends Component {
         return (
             <div>
                 <div className="control">
-                    <AddImage onAdd={this.handleAdd} />
+                    <AddImage handleAdd={this.handleAdd} />
                 </div>
             </div>
         )
