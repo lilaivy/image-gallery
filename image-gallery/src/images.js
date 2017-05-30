@@ -1,21 +1,54 @@
+import lordsOfDogtown from './photos/lordsOfDogtown.jpg';
+import jayAdams from './photos/jayAdams.png';
+import peggyOki from './photos/peggyOki.jpg';
+import mikeKolar from './photos/mikeKolar.jpg';
+import peggyTurner from './photos/peggyTurner.jpg';
+import lauraThornhill from './photos/lauraThornhill2.jpg';
+import rampage from './photos/rampage.jpg';
+
 const images = [
     {
-        title: 'Cute Bunny',
-        description: 'Isn\'t it fuzzy-wuzzy cutest thing you\'ve ever seen?',
-        url: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg'
+        title: 'Z Boys',
+        description: 'Zephyr skate team 1970\'s',
+        url: lordsOfDogtown
     },
 
     {
-        title: 'Cuter Bunny',
-        description: 'Butterscotty and sweet!!!',
-        url: 'http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-25__605.jpg'
+        title: 'Turn Only',
+        description: 'Jay Adams gets low',
+        url: jayAdams
     },
 
     {
-        title: 'Cutest Bunny',
-        description: 'snow bunny stare!',
-        url: 'http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg'
+        title: 'Peggy Does Venice',
+        description: 'Peggy Oki repping Zephr',
+        url: peggyOki
+    },
+
+    {
+        title: 'Jumping Homies',
+        description: 'Mike Kolar 1970\'s',
+        url: mikeKolar
+    },
+
+    {
+        title: "Tippin' Toes",
+        description: 'Laura Thornhill in skate competition 1970\'s',
+        url: lauraThornhill
+    },
+
+    {
+        title: "Van Fans",
+        description: 'Peggy Turner repping Vans in skate competition',
+        url: peggyTurner
+    },
+
+    {
+        title: "Jumping Homies 2.0",
+        description: 'Rampage Expo 1970\'s',
+        url: rampage
     }
+
 ];
 
 export default {
