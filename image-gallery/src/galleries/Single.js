@@ -62,7 +62,7 @@ export default class Single extends Component {
                 </span>
 
                 <div>
-                    <img className='images' src={image.url} />
+                    <img className='images' src={image.url}  alt ="skateboarder"/>
                     <p className='image-caption'>{image.title}</p>
                     <p className='image-caption'>{image.description} </p>
                 </div>

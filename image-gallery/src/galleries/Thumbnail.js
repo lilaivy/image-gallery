@@ -11,7 +11,8 @@ export default function Thumbnail(props) {
                         style={{
                         display: 'inline-block'
                     }}>
-                        <img src={image.url} style={{
+                        <img src={image.url} alt="skateboarders" 
+                        style={{
                             height: '100px',
                             width: '100px',
                         }}
