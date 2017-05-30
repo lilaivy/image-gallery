@@ -7,11 +7,17 @@
   font-size: large;
 }
 
-.header-title {
+.header-container {
   text-align: center;
   font-family: 'Plaster', cursive;
   /*font-family: 'Montserrat Subrayada', sans-serif;*/
   font-size: 20px;
+}
+
+.header-title:hover {
+  cursor: pointer;
+  color: rgb(255, 82, 82);
+
 }
 
 

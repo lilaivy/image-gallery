@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import List from './List';
 import Gallery from './Gallery';
 import Thumbnail from './Thumbnail';
+import Intro from './IntroView'
 import PropTypes from 'prop-types';
-import introImage from '../photos/introImage.jpg'
+
 
 export default class Veiw extends Component {
 
@@ -11,7 +12,7 @@ export default class Veiw extends Component {
         super(props);
 
         this.state = {
-            CurrentView: null
+            CurrentView: Intro
         }
 
     }
@@ -21,7 +22,7 @@ export default class Veiw extends Component {
         images: PropTypes.array.isRequired
     }
 
-    changeView(View = null) {
+    changeView(View = Intro) {
         this.setState({ CurrentView: View });
     }
 
@@ -30,11 +31,12 @@ export default class Veiw extends Component {
 
         const { CurrentView } = this.state;
         return (
-            <div className="header-title">
-                <header>
+            <div className="header-container">
+                <header className="header-title"
+                    onClick={() => this.changeView(Intro)}>
                     <h1 > The Zephr Originals. </h1>
+                    <h2>Z-Girls & Boys of the 70's</h2>
                 </header>
-                <h2>Z-Girls & Boys of the 70's</h2>
 
                 <span>
                     <button className="view-buttons"
@@ -50,10 +52,7 @@ export default class Veiw extends Component {
                     <button className="view-buttons"
                         onClick={() => this.changeView(Gallery)}>CHECK OUT GALLERY VIEW</button>
                 </span>
-                <div className='intro-image'>
-                    <a href='https://www.youtube.com/watch?v=cKC-XBwQ_pA'>
-                    <img src={introImage}/> </a>
-                </div>
+
 
                 {CurrentView && <CurrentView
                     images={this.props.images} />

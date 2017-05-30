@@ -14,7 +14,7 @@ const images = [
         title: 'Z Boys',
         description: 'Zephyr skate team 1970\'s',
         url: lordsOfDogtown,
-        wiki: 'https://www.youtube.com/watch?v=cKC-XBwQ_pA',
+        wiki: 'https://en.wikipedia.org/wiki/Z-Boys',
         _id: shortId.generate()
     },
 
