@@ -44,16 +44,17 @@ export default class Single extends Component {
         }
         return (
             <div>  
-                <span className='nextBunny' style={{
+                <span className='arrow' style={{
                     fontSize: '50px',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    
 
                 }}
                     onClick={() => this.previousBunny(index)}>
                     &larr;
                 </span>
 
-                <span className='previousBunny' style={{
+                <span className='arrow' style={{
                     fontSize: '50px',
                     cursor: 'pointer',
                 }}
