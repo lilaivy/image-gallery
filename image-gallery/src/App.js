@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import View from './View.js'
-import imageData from './images';
+import imageData from './imagesApi';
 
 export default class App extends Component {
 

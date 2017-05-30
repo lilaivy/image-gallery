@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import List from './galleries/List';
-import Single from './galleries/Single';
-import Thumbnail from './galleries/Thumbnail';
+import List from './components/List';
+import Single from './components/Single';
+import Thumbnail from './components/Thumbnail';
 import PropTypes from 'prop-types';
 
 export default class Veiw extends Component {
