@@ -16,7 +16,7 @@ export default function Thumbnail(props) {
                             width: '100px',
                         }}
                         />
-                        <figcaption> {image.title} </figcaption>
+                        <figcaption className='image-caption'> {image.title} </figcaption>
                     </figure>
                 ))}
             </div>

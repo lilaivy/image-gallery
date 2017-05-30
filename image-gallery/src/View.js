@@ -33,9 +33,9 @@ images:PropTypes.array.isRequired
         return (
             <div className="header-title">
                 <header>
-                    <h1 >WELCOME TO THE FUZZY BUNNY IMAGE GALLERY</h1>
+                    <h1 >Dogtown & Z-Boys</h1>
                 </header>
-                <h2>Check out all the bunnies...</h2>
+                <h2> The Zephr Originals...</h2>
                
                     <span>
                         <button className="view-buttons"

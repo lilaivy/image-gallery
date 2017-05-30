@@ -9,16 +9,21 @@
 
 .header-title {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Plaster', cursive;
+  /*font-family: 'Montserrat Subrayada', sans-serif;*/
+  font-size: 20px;
 }
+
 
 .view-buttons {
   margin: 15px;
+  padding: 10px;
   font-size: 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   color: white;
-  border: 2px solid rgb(255, 82, 82);
+  border: 1px solid rgb(255, 82, 82);
   transition-duration: 0.4s;
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -28,11 +33,25 @@
 }
 
 .images{
-  max-width: 50%
+  max-width: 40%;
+   font-family: Courier New, Courier, monospace;
 }
 
 .list-view{
   list-style: none;
+
 }
+
+/*.bottom-list-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-bottom: 2px, solid, black;
+}*/
+
+.image-caption{
+ font-family: 'Raleway', sans-serif;
+ font-size: 15px;
+}
+
 
 

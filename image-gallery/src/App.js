@@ -26,7 +26,7 @@ export default class App extends Component {
     const { images } = this.state;
     return (
         <div>
-          <View images={images} />
+          <View classname="view-wrapper" images={images} />
         </div>
   
     );

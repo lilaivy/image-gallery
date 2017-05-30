@@ -63,8 +63,8 @@ export default class Single extends Component {
 
                 <div>
                     <img className='images' src={image.url} />
-                    <p>{image.title}</p>
-                    <p>{image.description} </p>
+                    <p className='image-caption'>{image.title}</p>
+                    <p className='image-caption'>{image.description} </p>
                 </div>
 
                 
