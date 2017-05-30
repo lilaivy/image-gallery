@@ -76,5 +76,22 @@ const images = [
 ];
 
 export default {
-    get() { return Promise.resolve(images) }
+    //get all images and make copy of array of objects
+    getImages() {
+        return Promise.resolve(images.slice());
+    },
+
+    addImage(image) {
+        const saved = {
+            ...image,
+            _id: shortId.generate()
+        }
+        return Promise.resolve(saved);
+
+    },
+deleteImage(id) {
+    const index = images.findIndex(image => image._id === id);
+    if (index > -1) images.splice(index, 1);
+    return Promise.resolve(index !== -1);
+}
 }
