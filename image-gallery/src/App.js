@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import View from './View.js'
+import View from './components/View.js'
 import imageData from './imagesApi';
 
 export default class App extends Component {
