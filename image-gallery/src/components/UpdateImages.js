@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import AddImage from './AddImage';
 import imagesApi from '../imagesApi';
 import '../App.css';
+
+//put this into app.js instead of separate component
 
 export default class UpdateImages extends Component {
     //what props am I passing
@@ -16,8 +18,8 @@ export default class UpdateImages extends Component {
 
     componentDidMount() {
         return (imagesApi.getImages()
-            .then(([title, description, url, wiki]) => {
-                this.setState({ title, description, url, wiki })
+            .then((images) => {
+                this.setState({images})
             }))
     }
 
@@ -45,4 +47,4 @@ export default class UpdateImages extends Component {
     }
 
 
-}
+}*/
