@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import View from './components/View.js'
-import imageData from './imagesApi';
 import AddImage from './components/AddImage'
-import UpdateImages from './components/UpdateImages';
 import imagesApi from './imagesApi';
 
 export default class App extends Component {
@@ -29,7 +27,7 @@ export default class App extends Component {
         imagesApi.addImage(image)
             .then(image => {
                 this.setState({
-                    //adding a new image to the imagesApi array
+                    //adding a new image objet to the imagesApi array
                     images: [...this.state.images, image]
                 });
             })
