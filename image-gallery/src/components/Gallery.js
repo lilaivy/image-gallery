@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
-export default class Single extends Component {
+export default class Gallery extends Component {
     constructor(props) {
         super(props);
 
