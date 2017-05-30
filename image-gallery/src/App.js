@@ -19,13 +19,6 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    imageData.getImages()
-      .then(images => {
-        this.setState({ images })
-      });
-  }
-
-  componentDidMount() {
     return (imagesApi.getImages()
       .then((images) => {
         this.setState({ images })
