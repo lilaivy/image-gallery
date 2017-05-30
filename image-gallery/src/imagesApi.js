@@ -91,7 +91,9 @@ export default {
     },
 deleteImage(id) {
     const index = images.findIndex(image => image._id === id);
+    //splice out the index with a matching id to the desired deleted image
     if (index > -1) images.splice(index, 1);
+    //Q: not sure about the logic here
     return Promise.resolve(index !== -1);
 }
 }
