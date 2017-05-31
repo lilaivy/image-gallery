@@ -29,6 +29,8 @@
 -o-transition: all 1s ease;
 -ms-transition: all 1s ease;
 transition: all 1s ease;
+position: absolute;
+
 
 }
 
@@ -41,6 +43,7 @@ span.play-video {
     display: none;
     position: relative;
     text-align: center;
+   
 }
 
 span.play-video:hover, a.video:hover + span {
@@ -102,7 +105,8 @@ span.play-video:hover, a.video:hover + span {
 
 
 
-
+/* Positioning help: https://jsfiddle.net/6k2Lhaje/7/ */
+/* Transition brightening help: http://www.thebrandsmen.com/css-image-hover-effects/ */
 
 
 
