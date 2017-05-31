@@ -37,7 +37,7 @@ export default class AddImage extends Component {
         const { title, description, url, wiki } = this.state;
 
         return (
-            <div ClassName="add-image">
+            <div className="add-image">
                 <h2>Add An Image:</h2>
                 <form onSubmit={event => {
                     event.preventDefault();
@@ -66,7 +66,7 @@ export default class AddImage extends Component {
                             value={wiki}
                             onChange={this.handleChange} />
                     </label>
-                    <button className="view-button" type="submit">Add Image</button>
+                    <button type="submit">Add Image</button>
                 </form>
 
             </div>
