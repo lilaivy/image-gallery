@@ -7,7 +7,7 @@ import lauraThornhill from './photos/lauraThornhill2.jpg';
 import rampage from './photos/rampage.jpg';
 import tonyAlva from './photos/tonyAlva.jpg';
 import shortId from 'shortid';
-// let shortId = require('shortid');
+
 
 const images = [
     {
