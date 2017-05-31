@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default class Single extends Component {
     constructor(props) {
@@ -11,6 +11,10 @@ export default class Single extends Component {
         }
 
     }
+
+    static PropTypes = {
+        images:PropTypes.array.isRequired
+    };
     //Two ways to use onClick: 
     //1:  onClick={this.previousBunny}....changes the context of this so must bind even in own component
     //2.   onClick={() =>  this.nextBunny(index)} > no need to bind because arrow function binds lexically//
@@ -62,7 +66,7 @@ export default class Single extends Component {
                 </span>
 
                 <div>
-                    <img className='images' src={image.url} />
+                    <img className='images' src={image.url} alt='' />
                     <p>{image.title}</p>
                     <p>{image.description} </p>
                 </div>
