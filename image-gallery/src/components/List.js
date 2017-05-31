@@ -12,7 +12,7 @@ import DeleteImage from './DeleteImage'
                         <li className="image-caption">{image.title} </li>
                         <li className="image-caption">{image.description} </li>
                         <li className="image-caption">{image.url} </li>
-                        <li><DeleteImage onClick={() => this.props.onDelete(image._id)}/></li>
+                        <li><DeleteImage onDelete={() => props.onDelete(image._id)}/></li>
                     </ul>))}
             </div>
 
@@ -21,7 +21,8 @@ import DeleteImage from './DeleteImage'
     }
 
     List.proptypes = {
-images:PropTypes.array.isRequired
+images:PropTypes.array.isRequired,
+onDelete:PropTypes.func.isRequired
 
 };
 

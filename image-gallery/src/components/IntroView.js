@@ -6,9 +6,9 @@ export default function Intro() {
     return (
         <div className='intro-image brighten'>
             <a className="video" href='https://www.youtube.com/watch?v=cKC-XBwQ_pA'>
-                <img src={introImage} />
+                <img src={introImage} alt='standing on boards'/>
             </a>
-            <span class="play-video">
+            <span className="play-video">
                 <h1>PLAY VIDEO</h1>
                 </span>
             

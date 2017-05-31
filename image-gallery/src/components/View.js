@@ -55,10 +55,10 @@ export default class Veiw extends Component {
                 </span>
 
 
-                {CurrentView && <CurrentView
+                 <CurrentView
                     images={this.props.images} 
                     onDelete={this.props.onDelete}/>
-                }
+                
 
             </div>
 
@@ -68,3 +68,4 @@ export default class Veiw extends Component {
 }
 
 //Q: I want to create delete button component at add to all three views...how do I pass onDelete to delete button as props?
+// line 58 if both are t

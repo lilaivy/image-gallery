@@ -72,7 +72,7 @@ export default class Gallery extends Component {
                     <img className='images' src={image.url} alt="skateboarder" />
                     <p className='image-caption'>{image.title}</p>
                     <p className='image-caption'>{image.description} </p>
-                    <DeleteImage onClick={() => this.props.onDelete(image._id)} />
+                    <DeleteImage onDelete={() => this.props.onDelete(image._id)} />
                 </div>
 
 
