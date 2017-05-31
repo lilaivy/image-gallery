@@ -34,10 +34,11 @@ export default class App extends Component {
             })
     }
 
-    handleDelete(id, index) {
+    handleDelete(id) {
       imagesApi.deleteImage(id)
       .then(() => {
         const images = this.state.images.slice();
+        const index = images.findIndex(image => image._id === id);
         images.splice(index, 1);
         this.setState({ images });
       })
