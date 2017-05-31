@@ -35,7 +35,7 @@ export default class Veiw extends Component {
                 <header className="header-title"
                     onClick={() => this.changeView(Intro)}>
                     <h1 > The Zephr Originals. </h1>
-                    <h2>Z-Girls & Boys of the 70's</h2>
+                    <h2>Z-Girls & Z-Boys of the 70's</h2>
                 </header>
 
                 <span>

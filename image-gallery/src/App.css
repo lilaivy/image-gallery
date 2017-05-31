@@ -20,26 +20,56 @@
 
 }
 
+.brighten img {
+  max-width: 35%;
+  border-radius: 15px;
+-webkit-filter: brightness(110%);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+
+}
+
+.brighten img:hover{
+-webkit-filter: brightness(175%);
+
+}
+
+span.play-video {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+span.play-video:hover, a.video:hover + span {
+    display: block;
+}
+
 
 .view-buttons {
   margin: 15px;
   padding: 10px;
-  font-size: 20px;
-  border-radius: 2px;
-  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  color: grey;
+  font-weight: bolder;
   border: 1px solid rgb(255, 82, 82);
   transition-duration: 0.4s;
   font-family: 'Raleway', sans-serif;
+  background-color: white;
 
 }
 
 .view-buttons:hover {
   background-color: rgb(255, 82, 82);
+  color: white;
   cursor: pointer;
 }
 
 .images{
-  max-width: 40%;
+   max-width: 40%;
    font-family: Courier New, Courier, monospace;
 }
 
