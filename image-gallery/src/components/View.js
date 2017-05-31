@@ -19,7 +19,8 @@ export default class Veiw extends Component {
     //use static if defining proptypes within the class.  
     // if function  statement looks like: View.propTypes.string.isrequired
     static propTypes = {
-        images: PropTypes.array.isRequired
+        images: PropTypes.array.isRequired,
+        onDelete: PropTypes.func.isRequired
     }
 
     changeView(View = Intro) {
@@ -55,7 +56,8 @@ export default class Veiw extends Component {
 
 
                 {CurrentView && <CurrentView
-                    images={this.props.images} />
+                    images={this.props.images} 
+                    onDelete={this.props.onDelete}/>
                 }
 
             </div>
@@ -64,3 +66,5 @@ export default class Veiw extends Component {
     }
 
 }
+
+//Q: I want to create delete button component at add to all three views...how do I pass onDelete to delete button as props?

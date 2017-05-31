@@ -14,6 +14,7 @@ export default class App extends Component {
     }
 
  this.handleAdd = this.handleAdd.bind(this);
+ this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -33,13 +34,24 @@ export default class App extends Component {
             })
     }
 
+    handleDelete(id, index) {
+      imagesApi.deleteImage(id)
+      .then(() => {
+        const images = this.state.images.slice();
+        images.splice(index, 1);
+        this.setState({ images });
+      })
+    }
+
 
   render() {
     const { images } = this.state;
     if (!images) return <div>Loading Images...</div>;
     return (
       <div>
-        <View classname="view-wrapper" images={images} />
+        <View classname="view-wrapper" 
+        images={images} 
+        onDelete={this.handleDelete} />
        
       
           <div className="control">
