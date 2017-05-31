@@ -14,7 +14,6 @@ import DeleteImage from './DeleteImage'
                         <li className="image-caption">{image.url} </li>
                         <li><DeleteImage onClick={() => this.props.onDelete(image._id)}/></li>
                     </ul>))}
-                    <DeleteImage/>
             </div>
 
 
@@ -23,5 +22,6 @@ import DeleteImage from './DeleteImage'
 
     List.proptypes = {
 images:PropTypes.array.isRequired
+
 };
 

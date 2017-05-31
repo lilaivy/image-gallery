@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import DeleteImage from './DeleteImage'
 
 export default class Gallery extends Component {
     constructor(props) {
@@ -11,13 +12,18 @@ export default class Gallery extends Component {
         }
 
     }
+    static propTypes = {
+        images: PropTypes.array.isRequired,
+
+    }
+
     //Two ways to use onClick: 
     //1:  onClick={this.previousBunny}....changes the context of this so must bind even in own component
     //2.   onClick={() =>  this.nextBunny(index)} > no need to bind because arrow function binds lexically//
     nextBunny(index) {
         const arrayLength = this.props.images.length;
         index++;
-        if (index > arrayLength -1) {
+        if (index > arrayLength - 1) {
             index = 0;
         }
         this.setState({ index });
@@ -43,11 +49,11 @@ export default class Gallery extends Component {
             return null;
         }
         return (
-            <div>  
+            <div>
                 <span className='arrow' style={{
                     fontSize: '50px',
                     cursor: 'pointer',
-                    
+
 
                 }}
                     onClick={() => this.previousBunny(index)}>
@@ -63,12 +69,13 @@ export default class Gallery extends Component {
                 </span>
 
                 <div>
-                    <img className='images' src={image.url}  alt ="skateboarder"/>
+                    <img className='images' src={image.url} alt="skateboarder" />
                     <p className='image-caption'>{image.title}</p>
                     <p className='image-caption'>{image.description} </p>
+                    <DeleteImage onClick={() => this.props.onDelete(image._id)} />
                 </div>
 
-                
+
             </div>
         )
     }

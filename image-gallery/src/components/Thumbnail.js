@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DeleteImage from './DeleteImage'
 
 export default function Thumbnail(props) {
 
@@ -20,6 +21,7 @@ export default function Thumbnail(props) {
                     />
                     </a>
                     <figcaption className='image-caption'> {image.title} </figcaption>
+                    <DeleteImage onClick={() => this.props.onDelete(image._id)}/>
                 </figure>
             ))}
         </div>
