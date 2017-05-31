@@ -24,7 +24,7 @@ export default class AddImage extends Component {
         })
     }
 
-//Q:are we saying let the value of the input become the name?
+    //Q:are we saying let the value of the input become the name?
     handleChange(event) {
         const { name, value } = event.target;
         this.setState({
@@ -37,7 +37,7 @@ export default class AddImage extends Component {
         const { title, description, url, wiki } = this.state;
 
         return (
-            <div>
+            <div ClassName="add-image">
                 <h2>Add An Image:</h2>
                 <form onSubmit={event => {
                     event.preventDefault();
@@ -50,21 +50,21 @@ export default class AddImage extends Component {
                             value={title}
                             onChange={this.handleChange} />
                     </label>
-                    <label> 
+                    <label>
                         Description: <input name="description"
-                        value={description}
-                        onChange={this.handleChange}/>
+                            value={description}
+                            onChange={this.handleChange} />
                     </label>
-                    <label> 
+                    <label>
                         Image URL: <input name="url"
-                        required
-                        value={url}
-                        onChange={this.handleChange}/>
+                            required
+                            value={url}
+                            onChange={this.handleChange} />
                     </label>
-                    <label> 
+                    <label>
                         Link to More Info: <input name="wiki"
-                        value={wiki}
-                        onChange={this.handleChange}/>
+                            value={wiki}
+                            onChange={this.handleChange} />
                     </label>
                     <button className="view-button" type="submit">Add Image</button>
                 </form>

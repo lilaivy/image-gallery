@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import DeleteImage from './DeleteImage'
 
+
 export default class Gallery extends Component {
     constructor(props) {
         super(props);
@@ -74,6 +75,7 @@ export default class Gallery extends Component {
                     <p className='image-caption'>{image.description} </p>
                     <DeleteImage onDelete={() => this.props.onDelete(image._id)} />
                 </div>
+                
 
 
             </div>

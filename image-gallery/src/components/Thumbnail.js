@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DeleteImage from './DeleteImage'
+import DeleteImage from './DeleteImage';
+
+
 
 export default function Thumbnail(props) {
 
@@ -16,12 +18,12 @@ export default function Thumbnail(props) {
                         style={{
                             height: '100px',
                             width: '100px',
-                            transition: 'all .2s ease-in-out' 
+                            transition: 'all .2s ease-in-out'
                         }}
                     />
                     </a>
                     <figcaption className='image-caption'> {image.title} </figcaption>
-                    <DeleteImage onDelete={() => props.onDelete(image._id)}/>
+                    <DeleteImage onDelete={() => props.onDelete(image._id)} />
                 </figure>
             ))}
         </div>
@@ -32,6 +34,6 @@ export default function Thumbnail(props) {
 
 Thumbnail.proptypes = {
     images: PropTypes.arrayOf(PropTypes.object).isRequired
-   
+
 };  //Q: This worked when I just had it listes as an array, is arrayOf optional?
 

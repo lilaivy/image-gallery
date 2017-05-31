@@ -4,6 +4,7 @@ import Gallery from './Gallery';
 import Thumbnail from './Thumbnail';
 import Intro from './IntroView'
 import PropTypes from 'prop-types';
+import AddImage from './AddImage'
 
 
 export default class Veiw extends Component {
@@ -20,7 +21,8 @@ export default class Veiw extends Component {
     // if function  statement looks like: View.propTypes.string.isrequired
     static propTypes = {
         images: PropTypes.array.isRequired,
-        onDelete: PropTypes.func.isRequired
+        onDelete: PropTypes.func.isRequired,
+        handleAdd: PropTypes.func.isRequired
     }
 
     changeView(View = Intro) {
@@ -55,10 +57,17 @@ export default class Veiw extends Component {
                 </span>
 
 
-                 <CurrentView
-                    images={this.props.images} 
-                    onDelete={this.props.onDelete}/>
-                
+                <CurrentView
+                    images={this.props.images}
+                    onDelete={this.props.onDelete}
+                    handleAdd={this.props.handleAdd} />
+
+                {CurrentView !== Intro &&  
+                <div className="control">
+                    <AddImage handleAdd={this.props.handleAdd}
+                    />
+                </div>}
+
 
             </div>
 

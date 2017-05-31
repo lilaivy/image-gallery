@@ -29,7 +29,7 @@
 -o-transition: all 1s ease;
 -ms-transition: all 1s ease;
 transition: all 1s ease;
-position: absolute;
+/*position: absolute;*/
 
 
 }
@@ -73,7 +73,6 @@ span.play-video:hover, a.video:hover + span {
 
 .images{
    max-width: 40%;
-   font-family: Courier New, Courier, monospace;
 }
 
 .list-view{
@@ -88,6 +87,11 @@ span.play-video:hover, a.video:hover + span {
 }*/
 
 .image-caption{
+ font-family: 'Raleway', sans-serif;
+ font-size: 15px;
+}
+
+.add-image {
  font-family: 'Raleway', sans-serif;
  font-size: 15px;
 }

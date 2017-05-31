@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import View from './components/View.js'
-import AddImage from './components/AddImage'
 import imagesApi from './imagesApi';
 
 export default class App extends Component {
@@ -52,13 +51,10 @@ export default class App extends Component {
       <div>
         <View classname="view-wrapper" 
         images={images} 
-        onDelete={this.handleDelete} />
+        onDelete={this.handleDelete}
+        handleAdd={this.handleAdd} />
        
-      
-          <div className="control">
-            <AddImage handleAdd={this.handleAdd} />
 
-        </div>
       </div>
 
     );
