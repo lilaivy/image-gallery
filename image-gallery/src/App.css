@@ -1,3 +1,8 @@
+*.Link{
+text-decoration: none;
+color: black;
+
+}
 .App {
   text-align: center;
 }
@@ -8,13 +13,11 @@
 }
 
 
-
-.Link, .header-container {
+ .header-container {
   text-align: center;
   font-family: 'Plaster', cursive;
   font-size: 20px;
   text-decoration: none;
-  color:black;
 }
 
 .Link:hover, .header-title:hover {

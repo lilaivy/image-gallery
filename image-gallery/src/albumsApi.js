@@ -6,7 +6,7 @@ import peggyTurner from './photos/peggyTurner.jpg';
 import lauraThornhill from './photos/lauraThornhill2.jpg';
 import rampage from './photos/rampage.jpg';
 import tonyAlva from './photos/tonyAlva.jpg';
-import surfTurf  from './phots/surfTurf.jpg';
+import surfTurf  from './photos/surfTurf.png';
 import shortId from 'shortid';
 
 
@@ -29,7 +29,7 @@ const albums = [
             wiki: 'https://www.washingtonpost.com/news/in-sight/wp/2015/08/20/locals-only-sun-drenched-vintage-photos-show-the-dawn-of-californias-skateboarding-culture-in-the-1970s/?utm_term=.33b15ce4e7ce',
             _id: shortId.generate()
         },
-        
+
         {
             title: 'Surf Turf',
             description: 'Dowgtown: Locals Only',
