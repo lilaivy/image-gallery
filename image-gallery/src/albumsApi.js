@@ -12,8 +12,8 @@ import shortId from 'shortid';
 
 const albums = [
     {
-        album: 'Z-Team',
-        _id: shortId.generate,
+        name: 'Z-Team',
+        _id: shortId.generate (),
         images: [{
             title: 'Z Boys',
             description: 'Zephyr skate team 1970\'s',
@@ -48,8 +48,8 @@ const albums = [
     },
 
     {
-        album: 'Z-Street',
-        _id: shortId.generate,
+        name: 'Z-Street',
+        _id: shortId.generate(),
         images: [{
 
             title: 'Turn Only',
@@ -71,8 +71,8 @@ const albums = [
     },
 
     {
-        album: 'Z-Compete',
-        _id: shortId.generate,
+        name: 'Z-Compete',
+        _id: shortId.generate(),
         images: [{
 
             title: "Tippin' Toes",
@@ -106,6 +106,10 @@ export default {
     getAlbums() {
         return Promise.resolve(albums.slice());
     },
+
+    //  getAlbum(albumId) {
+    //   return Promise.resolve(albums.images)
+    // },
 
     addAlbum(album) {
         const saved = {

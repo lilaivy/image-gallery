@@ -4,9 +4,10 @@ import View from './components/View.js';
 import Header from './components/Header';
 import Intro from './components/IntroView';
 import albumsApi from './albumsApi';
+import Albums from './components/Albums'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-const Albums = props => <h3>Albums</h3>
+// const Albums = props => <h3>Albums</h3>
 
 
 export default function App() {
@@ -45,7 +46,7 @@ export default function App() {
   // }
 
 
-    // if (!images) return <div>Loading Images...</div>;
+    
     return (
       <Router>
         <div>
