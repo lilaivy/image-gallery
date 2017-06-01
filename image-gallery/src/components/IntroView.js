@@ -5,10 +5,7 @@ export default function Intro( {match, location, history}) {
 
     return (
         <div className='intro-image brighten'>
-            <pre>{JSON.stringify(match, true, 2)}</pre>
-            <pre>{JSON.stringify(location, true, 2)}</pre>
-            <pre>{JSON.stringify(history, true, 2)}</pre>
-            
+
             <a className="video" href='https://www.youtube.com/watch?v=cKC-XBwQ_pA'>
                 <img src={introImage} alt='standing on boards' />
             </a>
@@ -17,3 +14,5 @@ export default function Intro( {match, location, history}) {
         </div>
     )
 }
+
+//Q: Why do we use a <pre> on lines 8-10, MDN says it's used for preformatted text?

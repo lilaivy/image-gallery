@@ -7,21 +7,24 @@
   font-size: large;
 }
 
-.header-container {
+
+
+.Link, .header-container {
   text-align: center;
   font-family: 'Plaster', cursive;
-  /*font-family: 'Montserrat Subrayada', sans-serif;*/
   font-size: 20px;
+  text-decoration: none;
+  color:black;
 }
 
-.header-title:hover {
+.Link:hover, .header-title:hover {
   cursor: pointer;
   color: rgb(255, 82, 82);
 
 }
 
-.brighten img {
-  max-width: 35%;
+.intro-image, .brighten img {
+  max-width: 50%;
   border-radius: 15px;
 -webkit-filter: brightness(110%);
 -webkit-transition: all 1s ease;
@@ -29,6 +32,9 @@
 -o-transition: all 1s ease;
 -ms-transition: all 1s ease;
 transition: all 1s ease;
+margin-left: auto;
+margin-right: auto;
+display: block
 /*position: absolute;*/
 
 
@@ -42,6 +48,7 @@ transition: all 1s ease;
 span.play-video {
     display: none;
     position: relative;
+    font-family: 'Plaster', cursive;
     text-align: center;
    
 }
