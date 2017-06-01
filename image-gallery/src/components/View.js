@@ -4,7 +4,7 @@ import Gallery from './Gallery';
 import Thumbnail from './Thumbnail';
 import Intro from './IntroView'
 import PropTypes from 'prop-types';
-import AddImage from './AddImage'
+import AddImage from './AddImage';
 
 
 export default class Veiw extends Component {
@@ -34,29 +34,8 @@ export default class Veiw extends Component {
 
         const { CurrentView } = this.state;
         return (
-            <div className="header-container">
-                <header className="header-title"
-                    onClick={() => this.changeView(Intro)}>
-                    <h1 > The Zephr Originals. </h1>
-                    <h2>Z-Girls & Z-Boys of the 70's</h2>
-                </header>
-
-                <span>
-                    <button className="view-buttons"
-                        onClick={() => this.changeView(List)}
-                    >CHECK OUT LIST VIEW</button>
-                </span>
-                <span>
-                    <button className="view-buttons"
-                        onClick={() => this.changeView(Thumbnail)}
-                    >CHECK OUT THUMBNAIL VIEW</button>
-                </span>
-                <span>
-                    <button className="view-buttons"
-                        onClick={() => this.changeView(Gallery)}>CHECK OUT GALLERY VIEW</button>
-                </span>
-
-
+            <div>
+            
                 <CurrentView
                     images={this.props.images}
                     onDelete={this.props.onDelete}

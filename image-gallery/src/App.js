@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import View from './components/View.js'
+import View from './components/View.js';
+import Header from './components/Header';
+import Intro from './components/IntroView';
 import imagesApi from './imagesApi';
-import { BrowserRouter as Router, } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+const Albums = props => <h3>Albums</h3>
+
 
 export default class App extends Component {
 
@@ -51,11 +56,17 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <View classname="view-wrapper"
+          <Header
+          Intro={this.props.Intro}/>
+          {/*<View classname="view-wrapper"
             images={images}
             onDelete={this.handleDelete}
-            handleAdd={this.handleAdd} />
+            handleAdd={this.handleAdd} />*/}
 
+        <Switch>
+        <Route exact path= '/' component={Intro}/>
+        <Route path='/albums'component={Albums}/>
+        </Switch>
         </div>
       </Router>
 
