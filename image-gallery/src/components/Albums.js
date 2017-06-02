@@ -29,13 +29,16 @@ export default class Albums extends Component {
             <div>
                 <h2>ALBUMS PAGE</h2>
                 <ul>
-                    {albums.map(album => <Album
+                    {albums.map(album => <Album 
                         key={album._id} {...album}
                         url={`${match.url}/${album._id}`} />
                     )}
                 </ul>
 
-                <Route path={`${match.url}/:albumId`} component={AlbumContent}/>
+                <Route path={`${match.url}/:albumId`} render={({match}) => {
+                   const album= albums.find(album => album._id === match.params.albumId)
+                   return <AlbumContent {...album}/>
+                } }/>
             </div>
 
         );
