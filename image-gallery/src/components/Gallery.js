@@ -51,6 +51,7 @@ export default class Gallery extends Component {
         }
         return (
             <div>
+                
                 <span className='arrow' style={{
                     fontSize: '50px',
                     cursor: 'pointer',
@@ -70,6 +71,7 @@ export default class Gallery extends Component {
                 </span>
 
                 <div>
+                    
                     <img className='images' src={image.url} alt="skateboarder" />
                     <p className='image-caption'><em>{image.title}</em> | {image.description}</p>
                     <DeleteImage onDelete={() => this.props.onDelete(image._id)} />

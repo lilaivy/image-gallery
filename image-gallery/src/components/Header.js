@@ -13,20 +13,7 @@ export default function Header(props) {
             </Link>
         </header>
 
-        <span>
-            <button className="view-buttons"
 
-            >CHECK OUT LIST VIEW</button>
-        </span>
-        <span>
-            <button className="view-buttons"
-
-            >CHECK OUT THUMBNAIL VIEW</button>
-        </span>
-        <span>
-            <button className="view-buttons"
-            >CHECK OUT GALLERY VIEW</button>
-        </span>
     </div>
 
     )}

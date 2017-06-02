@@ -1,6 +1,7 @@
 import React from 'react';
 import introImage from '../photos/introImage.jpg'
 
+
 export default function Intro( {match, location, history}) {
 
     return (
