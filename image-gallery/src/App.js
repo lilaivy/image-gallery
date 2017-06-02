@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import View from './components/View.js';
+// import View from './components/View.js';
 import Header from './components/Header';
 import Intro from './components/IntroView';
-import albumsApi from './albumsApi';
 import Albums from './components/Albums'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -59,6 +58,7 @@ export default function App() {
           <Switch>
             <Route exact path='/' component={Intro} />
             <Route path='/albums' component={Albums} />
+            
           </Switch>
         </div>
       </Router>

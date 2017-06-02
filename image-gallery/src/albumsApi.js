@@ -107,9 +107,9 @@ export default {
         return Promise.resolve(albums.slice());
     },
 
-    //  getAlbum(albumId) {
-    //   return Promise.resolve(albums.images)
-    // },
+     getAlbum(albumId) {
+      return Promise.resolve(albums.find(album => album.id === albumId));
+    },
 
     addAlbum(album) {
         const saved = {

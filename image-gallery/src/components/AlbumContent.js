@@ -7,7 +7,7 @@ export default function AlbumContent({ name, _id, images }) {
 
     return (
         <div>
-            <h4>{name}</h4>
+            <h4>Hey{name}</h4>
 
 
         </div>

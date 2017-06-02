@@ -21,7 +21,7 @@ export default class Albums extends Component {
     }
 
     render() {
-        const { match, location } = this.props;
+        const { match } = this.props;
         const { albums } = this.state;
      if(!albums) return <div>Loading ...</div>;
 
