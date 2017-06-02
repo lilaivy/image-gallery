@@ -1,12 +1,10 @@
 import React from 'react';
 import './App.css';
-// import View from './components/View.js';
 import Header from './components/Header';
 import Intro from './components/IntroView';
 import Albums from './components/Albums'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
-// const Albums = props => <h3>Albums</h3>
 
 
 export default function App() {
@@ -58,6 +56,7 @@ export default function App() {
           <Switch>
             <Route exact path='/' component={Intro} />
             <Route path='/albums' component={Albums} />
+            <Redirect path='/'/>
             
           </Switch>
         </div>
