@@ -1,7 +1,7 @@
 import lordsOfDogtown from './photos/lordsOfDogtown.jpg';
 import jayAdams from './photos/jayAdams.png';
 import peggyOki from './photos/peggyOki.jpg';
-import mikeKolar from './photos/mikeKolar.jpg';
+// import mikeKolar from './photos/mikeKolar.jpg';
 import peggyTurner from './photos/peggyTurner.jpg';
 import lauraThornhill from './photos/lauraThornhill2.jpg';
 import rampage from './photos/rampage.jpg';
@@ -24,7 +24,7 @@ module.exports= [
         {
             title: 'Jumping Homies',
             description: 'Mike Kolar 1970\'s',
-            url: mikeKolar,
+            url: 'https://s-media-cache-ak0.pinimg.com/originals/5c/5a/53/5c5a538be085b6a3a8c29a8474c3dc8a.jpg',
             wiki: 'https://www.washingtonpost.com/news/in-sight/wp/2015/08/20/locals-only-sun-drenched-vintage-photos-show-the-dawn-of-californias-skateboarding-culture-in-the-1970s/?utm_term=.33b15ce4e7ce',
            
         },
