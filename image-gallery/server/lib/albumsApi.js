@@ -1,13 +1,12 @@
 
-
-module.exports= [
+module.exports = [
     {
         name: 'Z-Team',
         images: [{
             title: 'Z Boys',
             description: 'Zephyr skate team 1970\'s',
-            url:'https://theselvedgeyard.files.wordpress.com/2012/12/zephyr-skate-team-z-boys-skateboarder.jpg?w=700',
-            wiki: 'https://en.wikipedia.org/wiki/Z-Boys',  
+            url: 'https://theselvedgeyard.files.wordpress.com/2012/12/zephyr-skate-team-z-boys-skateboarder.jpg?w=700',
+            wiki: 'https://en.wikipedia.org/wiki/Z-Boys',
         },
 
         {
@@ -20,7 +19,7 @@ module.exports= [
         {
             title: 'Surf Turf',
             description: 'Dowgtown: Locals Only',
-            url:'https://theselvedgeyard.files.wordpress.com/2012/12/dogtown-zephyr-surf-team-jeff-ho.png?w=900&h=584',
+            url: 'https://theselvedgeyard.files.wordpress.com/2012/12/dogtown-zephyr-surf-team-jeff-ho.png?w=900&h=584',
             wiki: '',
         },
 
@@ -43,14 +42,14 @@ module.exports= [
         images: [{
             title: 'Turn Only',
             description: 'Jay Adams gets low',
-            url:'https://professorsteven.files.wordpress.com/2014/09/jayadamsbycraigstecyk.jpg',
+            url: 'https://professorsteven.files.wordpress.com/2014/09/jayadamsbycraigstecyk.jpg',
             wiki: 'http://www.skateboardinghalloffame.org/projects/2012-jay-adams-2/',
         },
 
         {
             title: 'Peggy Does Venice',
             description: 'Peggy Oki repping Zephr',
-            url:'https://resizing.flixster.com/BcmHNkK827IO9T1Zgrs2x0b9__A=/300x300/v1.bjs3MDU0Mzg7ajsxNzM3ODsxMjAwOzM2MDA7MjcwMA',
+            url: 'https://resizing.flixster.com/BcmHNkK827IO9T1Zgrs2x0b9__A=/300x300/v1.bjs3MDU0Mzg7ajsxNzM3ODsxMjAwOzM2MDA7MjcwMA',
             wiki: 'http://www.skateboardinghalloffame.org/projects/2012-peggy-oki-2/',
         }]
 
@@ -60,24 +59,24 @@ module.exports= [
         name: 'Z-Compete',
         images: [{
 
-            title: "Tippin' Toes",
+            title: 'Tippin/\' Toes',
             description: 'Laura Thornhill in skate competition 1970\'s',
-            url:'http://www.monsterchildren.com/wp-content/uploads/2016/11/monster-children-molly-unsung-heroines-13.jpg',
-            wiki:'http://www.skateboardinghalloffame.org/projects/2013-laura-thornhill-caswell/',    
+            url: 'http://www.monsterchildren.com/wp-content/uploads/2016/11/monster-children-molly-unsung-heroines-13.jpg',
+            wiki: 'http://www.skateboardinghalloffame.org/projects/2013-laura-thornhill-caswell/',
         },
 
         {
             title: 'Custom Trucks',
             description: 'Tony Alva with custom gear',
-            url:'https://media-cdn.tripadvisor.com/media/photo-s/09/89/40/be/surf-skate-supply.jpg',
+            url: 'https://media-cdn.tripadvisor.com/media/photo-s/09/89/40/be/surf-skate-supply.jpg',
             wiki: 'http://www.skateboardinghalloffame.org/projects/tony-alva/',
         },
 
         {
-            title: "Van Fans",
+            title: 'Van Fans',
             description: 'Peggy Turner repping Vans in skate competition',
             url: 'https://s-media-cache-ak0.pinimg.com/originals/aa/1a/d8/aa1ad8d08a043c27cba87fe6aa40da9c.jpg',
-            wiki: '',   
+            wiki: '',
         }]
     }
 ];
