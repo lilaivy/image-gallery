@@ -117,6 +117,11 @@ span.play-video:hover, a.video:hover + span {
   transform: scale(1.5); 
 
 }
+.album-list{
+  display:inline-block;
+  padding:25px;
+  text-align: center;
+}
 
 
 

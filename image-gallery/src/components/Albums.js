@@ -39,7 +39,8 @@ export default class Albums extends Component {
         if (!albums) return <div>Loading ...</div>;
 
         return (
-            <div>
+            <div className="album-list">
+                <h1>Which Album?</h1>
                 <ul>
                     {albums.map(album => <Album
                         key={album._id} {...album}
