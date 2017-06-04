@@ -10,9 +10,9 @@ app.use(express.static('./public'));
 //what are you requireing from routes?
 
 app.use((req, res) => {
-  res.sendFile('index.html', {
-    root: './public/',
-  });
+    res.sendFile('index.html', {
+        root: './public/',
+    });
 });
 
 module.exports = app;
