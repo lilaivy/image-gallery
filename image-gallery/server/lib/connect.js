@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = Promise;
 
-const dbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/albums';
+const dbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/image-gallery';
 
 mongoose.connect(dbUri);
 
