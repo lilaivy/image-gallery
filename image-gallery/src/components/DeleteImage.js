@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class DeleteImage extends Component {
+export default function DeleteImage({ onDelete }) {
 
-    static propTypes = {
-        onDelete: PropTypes.func.isRequired
-    }
+DeleteImage.propTypes = {
+    onDelete: PropTypes.func.isRequired
+}
 
-    render() {
-        return (
-            <button className="delete-button"
-                onClick={this.props.onDelete}>
-                DELETE IMAGE
+
+return (
+    <button className="delete-button"
+        onClick={onDelete}>
+        DELETE IMAGE
             </button>
-        )
-    }
+)
 
 }

@@ -32,16 +32,7 @@ export default function App() {
   //     })
   // }
 
-  // handleDelete(id) {
-  //   imagesApi.deleteImage(id)
-  //     .then(() => {
-  //       const images = this.state.images.slice();
-  //       const index = images.findIndex(image => image._id === id);
-  //       images.splice(index, 1);
-  //       this.setState({ images });
-  //     })
-  // }
-
+  
 
     
     return (
