@@ -26,7 +26,7 @@ router
         Album.find({ name: album.name })
             .count()
             .then(count => {
-                if(count > 0) throw { code: 400, error: 'album name must be unique' };
+                if (count > 0) throw { code: 400, error: 'album name must be unique' };
                 return new Album(album).save();
             })
             .then(album => res.send(album))
@@ -49,10 +49,26 @@ router
     .delete('/:id', (req, res, next) => {
         Album.findByIdAndRemove(req.params.id)
             .then(album => {
-                res.send({ removed: !! album });
+                res.send({ removed: !!album });
             })
             .catch(next);
 
+    })
+
+    .patch('/:id/images', (req, res, next) => {
+        Album.findByIdAndUpdate(req.params.id,
+            { $push: { 'images': { '_id': req.params.imageId } } }, { new: true })
+            .then(album => res.send(album))
+            .catch(next);
+    })
+
+    .patch('/:id/images/:imageId', (req, res, next) => {
+        Album.findByIdAndUpdate(req.params.id,
+            { $pull: { 'images': { '_id': req.params.imageId } } }, { removed: true })
+            .then(album => res.send(album))
+            .catch(next);
     });
+
+
 
 module.exports = router;

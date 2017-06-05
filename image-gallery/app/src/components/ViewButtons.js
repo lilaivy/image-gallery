@@ -14,7 +14,7 @@ export default function Buttons({match}){
         </span>
         </Link>
 
-       <Link to={`${match.url}/Thumbnail`}> <span>
+       <Link to={`${match.url}/Thumbnail`}><span>
             <button className="view-buttons"
             >CHECK OUT THUMBNAIL VIEW</button>
         </span>
