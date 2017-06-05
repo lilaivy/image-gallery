@@ -81,7 +81,7 @@ describe('albums api', () => {
 
     }
 
-    it('rountrips a new Album', () => {
+    it.only('rountrips a new Album', () => {
         return saveAlbum(fakeAlbum1)
             .then(savedAlbum => {
                 assert.ok(savedAlbum._id, 'saved has id');
@@ -93,6 +93,7 @@ describe('albums api', () => {
             })
             .then(res => res.body)
             .then(gotAlbum => {
+                
                 assert.deepEqual(gotAlbum, Object.assign({}, fakeAlbum1, { images: [] }));
             });
     });
