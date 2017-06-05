@@ -18,9 +18,7 @@ export default class Gallery extends Component {
 
     }
 
-    //Two ways to use onClick: 
-    //1:  onClick={this.previousBunny}....changes the context of this so must bind even in own component
-    //2.   onClick={() =>  this.nextBunny(index)} > no need to bind because arrow function binds lexically//
+
     nextBunny(index) {
         const arrayLength = this.props.images.length;
         index++;
