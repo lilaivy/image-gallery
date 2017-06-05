@@ -7,7 +7,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.static('./public'));
 
-//what are you requireing from routes?
+const albums = require('./routes/albums');
+
+app.use('/api/albums', albums);
 
 app.use((req, res) => {
     res.sendFile('index.html', {
