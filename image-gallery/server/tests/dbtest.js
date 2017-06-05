@@ -1,14 +1,15 @@
-require('./connect.js');
+require('../connectDB.js');
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const albumSchema = new Schema({
     name: String,
+    images:
 });
-const Album = mongoose.model('Album', albumSchema)
+const Album = mongoose.model('Album', albumSchema);
 
-const albumData = require('./albumsApi.js');
+const albumData = require('../albumsApi.js');
 albumData.forEach(albumData => {
     const album = new Album({ name: albumData.name });
     album.save();
