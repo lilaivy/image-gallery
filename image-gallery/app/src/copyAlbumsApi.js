@@ -1,12 +1,4 @@
-// import lordsOfDogtown from './photos/lordsOfDogtown.jpg';
-import jayAdams from './photos/jayAdams.png';
-import peggyOki from './photos/peggyOki.jpg';
-// import mikeKolar from './photos/mikeKolar.jpg';
-import peggyTurner from './photos/peggyTurner.jpg';
-import lauraThornhill from './photos/lauraThornhill2.jpg';
-// import rampage from './photos/rampage.jpg';
-import tonyAlva from './photos/tonyAlva.jpg';
-// import surfTurf from './photos/surfTurf.png';
+
 import shortId from 'shortid';
 
 

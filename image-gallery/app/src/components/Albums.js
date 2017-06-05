@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import albumsApi from '../albumsApi';
 import { Route } from 'react-router-dom';
 import Album from './Album';
 import AlbumContent from './AlbumContent'
@@ -13,12 +12,12 @@ export default class Albums extends Component {
         }
     }
 
-    componentDidMount() {
-        return (albumsApi.getAlbums()
-            .then((albums) => {
-                this.setState({ albums })
-            }))
-    }
+    // componentDidMount() {
+    //     return (copyAlbumsApi.getAlbums()
+    //         .then((albums) => {
+    //             this.setState({ albums })
+    //         }))
+    // }
 
     render() {
         const { match } = this.props;
