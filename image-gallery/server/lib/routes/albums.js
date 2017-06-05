@@ -15,19 +15,30 @@ router
     .get('/:id', (req, res, next) => {
         const id = req.params.id;
         Album.findById(id).lean()
-        .then(album => {
-            if(!album)res.status(404).send(`${id} not found`);
-            else res.send(album);
-        })
-        .catch(next);
+            .then(album => {
+                if (!album) res.status(404).send(`${id} not found`);
+                else res.send(album);
+            })
+            .catch(next);
     })
-
     .post('/', (req, res, next) => {
-        new Album(req.body)
-            .save()
+        const album = req.body;
+        Album.find({ name: album.name })
+            .count()
+            .then(count => {
+                if(count > 0) throw { code: 400, error: 'album name must be unique' };
+                return new Album(album).save();
+            })
             .then(album => res.send(album))
             .catch(next);
     })
+
+    // .post('/', (req, res, next) => {
+    //     new Album(req.body)
+    //         .save()
+    //         .then(album => res.send(album))
+    //         .catch(next);
+    // })
 
     .put('/:id', (req, res, next) => {
         Album.findByIdAndUpdate(req.params.id, req.body, { new: true })
@@ -35,17 +46,13 @@ router
             .catch(next);
     })
 
-     .delete('/:id', (req, res, next) => {
+    .delete('/:id', (req, res, next) => {
         Album.findByIdAndRemove(req.params.id)
-            .then(response => {
-                res.send({ removed: response ? true : false });
+            .then(album => {
+                res.send({ removed: !! album });
             })
             .catch(next);
 
-
-
-    
-
-
+    });
 
 module.exports = router;
