@@ -1,5 +1,6 @@
 
-module.exports = [
+
+const albums = [
     {
         name: 'Z-Team',
         images: [{
@@ -79,4 +80,6 @@ module.exports = [
             wiki: '',
         }]
     }
-];
+]
+
+module.exports = albums
