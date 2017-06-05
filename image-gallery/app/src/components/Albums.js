@@ -17,11 +17,18 @@ export default class Albums extends Component {
         this.fetchAlbum(params.albumId)
     }
 
+    componentWillReceiveProps(nextProps) {
+    const nextAlbumId = nextProps.match.params.albumId;
+    if (nextAlbumId !== this.props.match.params.albumId) {
+      this.fetchStore(nextAlbumId);
+    }
+  }
 
-    fetchAlbum(albumId) {
-        fetch(`/api/albums/${albumId}`)
+
+    fetchAlbum() {
+        fetch(`/api/albums`)
             .then(res => res.json())
-            .then(album => this.setState({ album }))
+            .then(albums => this.setState({ albums }))
             .catch(error => console.log(error));
     }
 
@@ -32,6 +39,7 @@ export default class Albums extends Component {
 
         return (
             <div>
+                <h4>{albums.name}</h4>
                 <ul>
                     {albums.map(album => <Album
                         key={album._id} {...album}
