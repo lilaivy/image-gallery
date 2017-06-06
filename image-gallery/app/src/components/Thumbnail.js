@@ -23,7 +23,7 @@ export default function Thumbnail(props) {
                     />
                     </a>
                     <figcaption className='image-caption'> {image.title} </figcaption>
-                    <DeleteImage onDelete={() => props.onDelete(image._id)} />
+                    <DeleteImage onDelete={() => props.removeImage(props._id, image._id)} />
                 </figure>
             ))}
         </div>

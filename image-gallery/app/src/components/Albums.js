@@ -49,7 +49,7 @@ export default class Albums extends Component {
 
                 <Route path={`${match.url}/:albumId`} render={({ match }) => {
                     const album = albums.find(album => album._id === match.params.albumId)
-                    return <AlbumContent {...album} match={match} />
+                    return <AlbumContent {...album} albumId={album._id} match={match} />
                 }} />
             </div>
 

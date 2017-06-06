@@ -62,8 +62,8 @@ router
             .catch(next);
     })
 
-    .patch('/:id/images/:imageId', (req, res, next) => {
-        Album.findByIdAndUpdate(req.params.id,
+    .post('/:albumId/remove/:imageId', (req, res, next) => {
+        Album.findByIdAndUpdate(req.params.albumId,
             { $pull: { 'images': { '_id': req.params.imageId } } }, { removed: true })
             .then(album => res.send(album))
             .catch(next);
