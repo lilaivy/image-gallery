@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom';
 import Gallery from './Gallery';
 import List from './List';
 import Thumbnail from './Thumbnail';
-import ViewButtons from './ViewButtons'
+import ViewButtons from './ViewButtons';
+import AddImage from './AddImage';
 
 const Views = { List, Thumbnail, Gallery }
 
@@ -25,6 +26,10 @@ class AlbumContent extends Component {
                         addImage={addImage} />
                 }
                 } />
+                <div className="control">
+                    <AddImage handleAdd={this.props.handleAdd}
+                    />
+                </div>
             </div>
 
         )
