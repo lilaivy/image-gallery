@@ -28,7 +28,7 @@ class AlbumContent extends Component {
                 } />
                 <div className="control">
                     <AddImage 
-                    handleAdd={this.props.addImage}
+                    handleAdd={addImage}
                     albumId={albumId}
                     />
                 </div>
