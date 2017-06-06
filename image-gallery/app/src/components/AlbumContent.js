@@ -23,11 +23,13 @@ class AlbumContent extends Component {
                         images={images}
                         albumId={albumId}
                         removeImage={removeImage}
-                        addImage={addImage} />
+                        />
                 }
                 } />
                 <div className="control">
-                    <AddImage handleAdd={this.props.handleAdd}
+                    <AddImage 
+                    handleAdd={this.props.addImage}
+                    albumId={albumId}
                     />
                 </div>
             </div>

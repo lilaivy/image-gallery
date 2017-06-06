@@ -25,7 +25,7 @@ export default class Albums extends Component {
         };
 
         this.addImage = (albumId, image) => {
-            fetch(`/${albumId}/images`, {
+            fetch(`/api/albums/${albumId}/images`, {
                 method:'post'
             })
             .then(res => res.json())
@@ -36,7 +36,7 @@ export default class Albums extends Component {
                 this.setState({...albums, image})
             })
             .catch(error => console.log(error))
-        }
+        };
 
 
     }

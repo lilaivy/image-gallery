@@ -38,7 +38,7 @@ export default class AddImage extends Component {
                 <h2>Add An Image:</h2>
                 <form onSubmit={event => {
                     event.preventDefault();
-                    this.props.handleAdd(this.state);
+                    this.props.handleAdd(this.props.albumId, this.state);
                     this.reset();
                 }}>
                     <label>

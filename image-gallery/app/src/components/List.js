@@ -4,7 +4,7 @@ import DeleteImage from './DeleteImage'
 
 
     export default function List (props) {
- 
+ //Dont forget to delete log
   console.log(props);
         return (
             <div>
