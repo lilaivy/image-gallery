@@ -10,6 +10,19 @@ export default class Albums extends Component {
         this.state = {
             albums: []
         }
+        this.removeImage = (albumId, imageId) => {
+            fetch(`/api/albums/${albumId}/remove/${imageId}`, {
+                method: 'post'
+            })
+                .then(res => res.json())
+                .then(album => {
+                    const index = this.state.albums.findIndex(album => album._id === albumId)
+                    const albums = this.state.albums.slice()
+                    albums[index] = album
+                    this.setState({ albums })
+                })
+                .catch(error => console.log(error));
+        };
     }
 
     componentDidMount() {
@@ -18,11 +31,11 @@ export default class Albums extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-    const nextAlbumId = nextProps.match.params.albumId;
-    if (nextAlbumId !== this.props.match.params.albumId) {
-      this.fetchStore(nextAlbumId);
+        const nextAlbumId = nextProps.match.params.albumId;
+        if (nextAlbumId !== this.props.match.params.albumId) {
+            this.fetchStore(nextAlbumId);
+        }
     }
-  }
 
 
     fetchAlbum() {
@@ -49,7 +62,11 @@ export default class Albums extends Component {
 
                 <Route path={`${match.url}/:albumId`} render={({ match }) => {
                     const album = albums.find(album => album._id === match.params.albumId)
-                    return <AlbumContent {...album} albumId={album._id} match={match} />
+                    return <AlbumContent
+                        {...album}
+                        albumId={album._id}
+                        match={match}
+                        removeImage={this.removeImage} />
                 }} />
             </div>
 

@@ -23,7 +23,7 @@ export default function Thumbnail(props) {
                     />
                     </a>
                     <figcaption className='image-caption'> {image.title} </figcaption>
-                    <DeleteImage onDelete={() => props.removeImage(props._id, image._id)} />
+                    <DeleteImage onDelete={() => props.removeImage(props.albumId, image._id)} />
                 </figure>
             ))}
         </div>
@@ -35,5 +35,5 @@ export default function Thumbnail(props) {
 Thumbnail.proptypes = {
     images: PropTypes.arrayOf(PropTypes.object).isRequired
 
-};  //Q: This worked when I just had it listes as an array, is arrayOf optional?
+};  
 

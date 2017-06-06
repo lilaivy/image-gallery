@@ -24,7 +24,6 @@ export default class AddImage extends Component {
         })
     }
 
-    //Q:are we saying let the value of the input become the name?
     handleChange(event) {
         const { name, value } = event.target;
         this.setState({
@@ -32,7 +31,6 @@ export default class AddImage extends Component {
         });
     }
 
-    //Q: Why are we passing this.state in line 43 when the fn takes (image)?
     render() {
         const { title, description, url, wiki } = this.state;
 
