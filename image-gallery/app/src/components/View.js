@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import List from './List';
-import Gallery from './Gallery';
-import Thumbnail from './Thumbnail';
 import Intro from './IntroView'
 import PropTypes from 'prop-types';
 import AddImage from './AddImage';
 
 
-export default class Veiw extends Component {
+export default class View extends Component {
 
     constructor(props) {
         super(props);
@@ -35,7 +32,7 @@ export default class Veiw extends Component {
         const { CurrentView } = this.state;
         return (
             <div>
-            
+
                 <CurrentView
                     images={this.props.images}
                     onDelete={this.props.onDelete}
@@ -47,13 +44,9 @@ export default class Veiw extends Component {
                     />
                 </div>}
 
-
             </div>
 
         )
     }
 
 }
-
-//Q: I want to create delete button component at add to all three views...how do I pass onDelete to delete button as props?
-// line 58 if both are t

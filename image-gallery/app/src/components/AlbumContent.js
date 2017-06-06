@@ -11,7 +11,7 @@ class AlbumContent extends Component {
 
 
     render() {
-        const { match, images, albumId, removeImage } = this.props
+        const { match, images, albumId, removeImage, addImage } = this.props
         return (
 
             <div>
@@ -21,7 +21,8 @@ class AlbumContent extends Component {
                     return <View
                         images={images}
                         albumId={albumId}
-                        removeImage={removeImage} />
+                        removeImage={removeImage}
+                        addImage={addImage} />
                 }
                 } />
             </div>

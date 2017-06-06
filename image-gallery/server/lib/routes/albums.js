@@ -33,12 +33,7 @@ router
             .catch(next);
     })
 
-    // .post('/', (req, res, next) => {
-    //     new Album(req.body)
-    //         .save()
-    //         .then(album => res.send(album))
-    //         .catch(next);
-    // })
+
 
     .put('/:id', (req, res, next) => {
         Album.findByIdAndUpdate(req.params.id, req.body, { new: true })
@@ -55,14 +50,14 @@ router
 
     })
 
-    .patch('/:id/images', (req, res, next) => {
+    .post('/:albumId/images', (req, res, next) => {
         Album.findByIdAndUpdate(req.params.id,
             { $push: { 'images': { '_id': req.params.imageId } } }, { new: true })
             .then(album => res.send(album))
             .catch(next);
     })
 
-    .post('/:albumId/remove/:imageId', (req, res, next) => {
+    .delete('/:albumId/remove/:imageId', (req, res, next) => {
         Album.findByIdAndUpdate(req.params.albumId,
             { $pull: { 'images': { '_id': req.params.imageId } } }, { removed: true })
             .then(album => res.send(album))

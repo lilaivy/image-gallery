@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 export default class AddImage extends Component {
-    //passing onAdd Handler from UpdateImages.js
     constructor(props) {
         super(props);
 

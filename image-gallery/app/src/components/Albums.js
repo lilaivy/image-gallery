@@ -12,7 +12,7 @@ export default class Albums extends Component {
         }
         this.removeImage = (albumId, imageId) => {
             fetch(`/api/albums/${albumId}/remove/${imageId}`, {
-                method: 'post'
+                method: 'delete'
             })
                 .then(res => res.json())
                 .then(album => {
@@ -23,6 +23,22 @@ export default class Albums extends Component {
                 })
                 .catch(error => console.log(error));
         };
+
+        this.addImage = (albumId, image) => {
+            fetch(`/${albumId}/images`, {
+                method:'post'
+            })
+            .then(res => res.json())
+            .then(album => {
+                const index = this.state.albums.findIndex(album => album._id === albumId)
+                const albums = this.state.albums.slice()
+                albums[index] = album
+                this.setState({...albums, image})
+            })
+            .catch(error => console.log(error))
+        }
+
+
     }
 
     componentDidMount() {
@@ -66,7 +82,8 @@ export default class Albums extends Component {
                         {...album}
                         albumId={album._id}
                         match={match}
-                        removeImage={this.removeImage} />
+                        removeImage={this.removeImage}
+                        addImage={this.addImage} />
                 }} />
             </div>
 
