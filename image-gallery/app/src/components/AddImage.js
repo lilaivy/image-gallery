@@ -14,6 +14,7 @@ export default class AddImage extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
+//reset to clear fields after adding a new image
     reset() {
         this.setState({
             title: '',

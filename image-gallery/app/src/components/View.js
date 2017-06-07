@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Intro from './IntroView'
 import PropTypes from 'prop-types';
+import AddImage from './AddImage'
 
 
 
@@ -50,3 +51,5 @@ export default class View extends Component {
     }
 
 }
+
+//Q: do I need <AddImage in this component?

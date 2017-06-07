@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Album from './Album';
 import AlbumContent from './AlbumContent';
-import AddAlbum from './AddAlbum'
+import AddAlbum from './AddAlbum';
+
 
 
 export default class Albums extends Component {
@@ -56,7 +57,7 @@ export default class Albums extends Component {
                 });
         }
 
-        this.deleteAlbum(albumID, index) {
+        this.removeAlbum = (albumId, index) => {
             fetch(`/api/albums/${albumId}`, {
                 method: 'DELETE',
             })
@@ -101,8 +102,12 @@ export default class Albums extends Component {
                 <h1>Choose an Album:</h1>
                 <ul>
                     {albums.map(album => <Album
-                        key={album._id} {...album}
-                        url={`${match.url}/${album._id}`} />
+                        key={album._id} 
+                        {...album}
+                        url={`${match.url}/${album._id}`} 
+                        removeAlbum={this.removeAlbum}
+                        />
+                   
                     )}
                 </ul>
 
@@ -110,10 +115,11 @@ export default class Albums extends Component {
                     const album = albums.find(album => album._id === match.params.albumId)
                     return <AlbumContent
                         {...album}
-                        /*albumId={album._id}*/
+                        albumId={album._id}
                         match={match}
                         removeImage={this.removeImage}
-                        addImage={this.addImage} />
+                        addImage={this.addImage} 
+                        />
                 }} />
 
                 <AddAlbum

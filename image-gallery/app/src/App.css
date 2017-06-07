@@ -123,6 +123,16 @@ span.play-video:hover, p.video:hover + span {
   text-align: center;
 }
 
+/*span.delete-album-button{
+  display: none;
+}
+
+span.delete-album-button:hover, span.delete-album:hover + span {
+  display: block;
+  cursor: pointer;
+  color: rgb(255, 82, 82);
+}*/
+
 
 
 /* Positioning help: https://jsfiddle.net/6k2Lhaje/7/ */
