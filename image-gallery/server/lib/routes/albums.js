@@ -29,16 +29,10 @@ router
     })
 
 
-    .put('/:id', (req, res, next) => {
-        Album.findByIdAndUpdate(req.params.id, req.body, { new: true })
-            .then(album => res.send(album))
-            .catch(next);
-    })
-
     .delete('/:id', (req, res, next) => {
         Album.findByIdAndRemove(req.params.id)
-            .then(album => {
-                res.send({ removed: !!album });
+            .then(() => {
+                res.send({ removed: true});
             })
             .catch(next);
 
