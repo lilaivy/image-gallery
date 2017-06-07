@@ -91,11 +91,6 @@ span.play-video:hover, p.video:hover + span {
 
 }
 
-/*.bottom-list-item {
-  font-family: 'Raleway', sans-serif;
-  font-size: 15px;
-  border-bottom: 2px, solid, black;
-}*/
 
 .image-caption{
  font-family: 'Raleway', sans-serif;
@@ -133,7 +128,11 @@ span.delete-album-button:hover, span.delete-album:hover + span {
   color: rgb(255, 82, 82);
 }*/
 
-
+/*.bottom-list-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-bottom: 2px, solid, black;
+}*/
 
 /* Positioning help: https://jsfiddle.net/6k2Lhaje/7/ */
 /* Transition brightening help: http://www.thebrandsmen.com/css-image-hover-effects/ */

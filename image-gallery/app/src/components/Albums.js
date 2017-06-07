@@ -104,6 +104,7 @@ export default class Albums extends Component {
                         key={album._id} 
                         {...album}
                         url={`${match.url}/${album._id}`} 
+                        index={this.index}
                         removeAlbum={this.removeAlbum}
                         />
                    

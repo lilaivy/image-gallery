@@ -24,7 +24,8 @@ router
     .post('/', (req, res, next) => {
         new Album(req.body)
         .save()
-        .then(album => res.send(album))
+        .then(album => 
+            res.send(album))
         .catch(next);
     })
 

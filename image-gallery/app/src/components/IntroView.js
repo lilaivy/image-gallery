@@ -18,5 +18,3 @@ export default function Intro({ match, location, history }) {
         </div>
     )
 }
-
-//Q: Why do we use a <pre> on lines 8-10, MDN says it's used for preformatted text?
