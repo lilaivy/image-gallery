@@ -22,17 +22,11 @@ router
             .catch(next);
     })
     .post('/', (req, res, next) => {
-        const album = req.body;
-        Album.find({ name: album.name })
-            .count()
-            .then(count => {
-                if (count > 0) throw { code: 400, error: 'album name must be unique' };
-                return new Album(album).save();
-            })
-            .then(album => res.send(album))
-            .catch(next);
+        new Album(req.body)
+        .save()
+        .then(album => res.send(album))
+        .catch(next);
     })
-
 
 
     .put('/:id', (req, res, next) => {

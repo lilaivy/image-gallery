@@ -35,7 +35,6 @@ export default class Albums extends Component {
             })
                 .then(res => res.json())
                 .then(album => {
-                    console.log('album', album);
                     const index = this.state.albums.findIndex(album => album._id === albumId)
                     const albums = this.state.albums.slice()
                     albums[index] = album
@@ -43,6 +42,8 @@ export default class Albums extends Component {
                 })
                 .catch(error => console.log(error));
         };
+
+        this.addAlbum = (album)
 
 
     }
