@@ -56,6 +56,18 @@ export default class Albums extends Component {
                 });
         }
 
+        this.deleteAlbum(albumID, index) {
+            fetch(`/api/albums/${albumId}`, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(() => {
+                    const albums = this.state.albums.slice();
+                    albums.splice(index, 1);
+                    this.setState({ albums });
+                });
+        }
+
 
     }
 
@@ -104,8 +116,8 @@ export default class Albums extends Component {
                         addImage={this.addImage} />
                 }} />
 
-                 <AddAlbum
-                 handleAdd={this.addAlbum}/>
+                <AddAlbum
+                    handleAdd={this.addAlbum} />
             </div>
 
         );
