@@ -48,10 +48,6 @@ export default function App() {
       <Router>
         <div>
           <Header />
-          {/*<View classname="view-wrapper"
-            images={images}
-            onDelete={this.handleDelete}
-            handleAdd={this.handleAdd} />*/}
 
           <Switch>
             <Route exact path='/' component={Intro} />

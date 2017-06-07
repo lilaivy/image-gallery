@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Album from './Album';
-import AlbumContent from './AlbumContent'
+import AlbumContent from './AlbumContent';
+import AddAlbum from './AddAlbum'
 
 
 export default class Albums extends Component {
@@ -44,7 +45,7 @@ export default class Albums extends Component {
         this.addAlbum = (album) => {
             fetch('/api/albums', {
                 method: 'POST',
-                body: JSON.stringigy(album),
+                body: JSON.stringify(album),
                 headers: new Headers({ 'Content-Type': 'application/json' })
             })
                 .then(res => res.json())
@@ -102,8 +103,9 @@ export default class Albums extends Component {
                         removeImage={this.removeImage}
                         addImage={this.addImage} />
                 }} />
-                 <h1>Add A New Album:</h1>
+
                  <AddAlbum
+                 handleAdd={this.addAlbum}/>
             </div>
 
         );
