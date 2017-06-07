@@ -98,7 +98,7 @@ export default class Albums extends Component {
                     const album = albums.find(album => album._id === match.params.albumId)
                     return <AlbumContent
                         {...album}
-                        albumId={album._id}
+                        /*albumId={album._id}*/
                         match={match}
                         removeImage={this.removeImage}
                         addImage={this.addImage} />
