@@ -19,8 +19,3 @@ albumData.forEach(albumData => {
     const album = new Album(albumData);
     album.save();
 });
-// /*
-// Album.find()
-//     .then(albums => console.log(albums))
-//     .catch(err => console.error(err.message));
-//     */

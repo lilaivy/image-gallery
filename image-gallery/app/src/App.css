@@ -20,7 +20,7 @@ color: black;
   text-decoration: none;
 }
 
-.Link:hover, .header-title:hover {
+.Link:hover, .Link:active, .header-title:hover {
   cursor: pointer;
   color: rgb(255, 82, 82);
 
@@ -56,9 +56,10 @@ span.play-video {
    
 }
 
-span.play-video:hover, a.video:hover + span {
+span.play-video:hover, p.video:hover + span {
     display: block;
 }
+
 
 
 .view-buttons {
@@ -115,6 +116,11 @@ span.play-video:hover, a.video:hover + span {
   cursor: pointer;
   transform: scale(1.5); 
 
+}
+.album-list{
+  display:inline-block;
+  padding:25px;
+  text-align: center;
 }
 
 

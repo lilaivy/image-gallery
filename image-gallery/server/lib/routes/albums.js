@@ -52,15 +52,18 @@ router
 
     .post('/:albumId/images', (req, res, next) => {
         Album.findByIdAndUpdate(req.params.albumId,
-            { $push: { 'images': { '_id': req.params.imageId } } }, { new: true })
+            { $push: { images: req.body } }, { new: true })
             .then(album => res.send(album))
             .catch(next);
     })
 
-    .delete('/:albumId/remove/:imageId', (req, res, next) => {
+    .patch('/:albumId/remove/:imageId', (req, res, next) => {
         Album.findByIdAndUpdate(req.params.albumId,
-            { $pull: { 'images': { '_id': req.params.imageId } } }, { removed: true })
-            .then(album => res.send(album))
+            { $pull: { 'images': {'_id': req.params.imageId } } }, { new: true })
+            .then(album => {
+                console.log('res album:', album);
+                res.send(album);
+            })
             .catch(next);
     });
 

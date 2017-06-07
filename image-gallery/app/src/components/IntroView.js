@@ -9,9 +9,9 @@ export default function Intro({ match, location, history }) {
         <div className='intro-image brighten'>
 
             <Link className="Link" to={`/albums`}>
-                <a className="video">
+                <p className="video">
                     <img src={introImage} alt='standing on boards' />
-                </a>
+                </p>
             <span className="play-video" ><h1>GO TO IMAGE GALLERY</h1></span>
             </Link>
 
