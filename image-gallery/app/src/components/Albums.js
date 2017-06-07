@@ -16,7 +16,7 @@ export default class Albums extends Component {
             })
                 .then(res => res.json())
                 .then(album => {
-                    console.log('album:' , album);
+                    console.log('album:', album);
                     const index = this.state.albums.findIndex(album => album._id === albumId)
                     const albums = this.state.albums.slice()
                     albums[index] = album
@@ -29,9 +29,7 @@ export default class Albums extends Component {
             fetch(`/api/albums/${albumId}/images`, {
                 method: 'POST',
                 body: JSON.stringify(image),
-                headers: new Headers({
-                    'Content-Type': 'application/json',
-                })
+                headers: new Headers({ 'Content-Type': 'application/json' })
             })
                 .then(res => res.json())
                 .then(album => {
@@ -43,7 +41,19 @@ export default class Albums extends Component {
                 .catch(error => console.log(error));
         };
 
-        this.addAlbum = (album)
+        this.addAlbum = (album) => {
+            fetch('/api/albums', {
+                method: 'POST',
+                body: JSON.stringigy(album),
+                headers: new Headers({ 'Content-Type': 'application/json' })
+            })
+                .then(res => res.json())
+                .then(newAlbum => {
+                    this.setState({
+                        albums: [...this.state.albums, album]
+                    });
+                });
+        }
 
 
     }
@@ -75,7 +85,7 @@ export default class Albums extends Component {
 
         return (
             <div className="album-list">
-                <h1>Which Album?</h1>
+                <h1>Choose an Album:</h1>
                 <ul>
                     {albums.map(album => <Album
                         key={album._id} {...album}
@@ -92,6 +102,8 @@ export default class Albums extends Component {
                         removeImage={this.removeImage}
                         addImage={this.addImage} />
                 }} />
+                 <h1>Add A New Album:</h1>
+                 <AddAlbum
             </div>
 
         );
