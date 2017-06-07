@@ -51,7 +51,7 @@ router
     })
 
     .post('/:albumId/images', (req, res, next) => {
-        Album.findByIdAndUpdate(req.params.id,
+        Album.findByIdAndUpdate(req.params.albumId,
             { $push: { 'images': { '_id': req.params.imageId } } }, { new: true })
             .then(album => res.send(album))
             .catch(next);
