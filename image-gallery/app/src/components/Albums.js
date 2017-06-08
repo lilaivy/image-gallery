@@ -51,7 +51,7 @@ export default class Albums extends Component {
                 .then(res => res.json())
                 .then(newAlbum => {
                     this.setState({
-                        albums: [...this.state.albums, album]
+                        albums: [...this.state.albums, newAlbum]
                     });
                 });
         }
@@ -100,12 +100,12 @@ export default class Albums extends Component {
             <div className="album-list">
                 <h1>Choose an Album:</h1>
                 <ul>
-                    {albums.map(album => <Album
+                    {albums.map((album, index) => <Album
                         key={album._id} 
                         {...album}
                         url={`${match.url}/${album._id}`} 
-                        index={this.index}
                         removeAlbum={this.removeAlbum}
+                        index={index}
                         />
                    
                     )}
