@@ -1,3 +1,6 @@
+//IF YOU WANT TO RUN THIS APP, COMMAND LINE NPM START//
+
+
 import React, { Component } from 'react';
 import './App.css';
 import View from './components/View.js'
@@ -16,6 +19,7 @@ export default class App extends Component {
  this.handleDelete = this.handleDelete.bind(this);
   }
 
+  //QUESTION: why did we use component did mount here?
   componentDidMount() {
     return (imagesApi.getImages()
       .then((images) => {

@@ -1,5 +1,5 @@
 import images from './imagesData';
-import shortId from 'shortid'
+import shortId from 'shortid' //created ID for each imported image
 
 export default {
     //get all images and make copy of array of objects

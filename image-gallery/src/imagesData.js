@@ -1,4 +1,5 @@
-import lordsOfDogtown from './photos/lordsOfDogtown.jpg';
+//import images from photos directory
+import lordsOfDogtown from './photos/lordsOfDogtown.jpg'; 
 import jayAdams from './photos/jayAdams.png';
 import peggyOki from './photos/peggyOki.jpg';
 import mikeKolar from './photos/mikeKolar.jpg';
@@ -9,6 +10,7 @@ import tonyAlva from './photos/tonyAlva.jpg';
 import shortId from 'shortid';
 
 
+//create array of image objects and generat ID for each object
 export default [
     {
         title: 'Z Boys',

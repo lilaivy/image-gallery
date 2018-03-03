@@ -47,6 +47,8 @@ export default class Gallery extends Component {
         if (!this.props.images.length) {
             return null;
         }
+
+        
         return (
             <div>
                 <span className='arrow' style={{
